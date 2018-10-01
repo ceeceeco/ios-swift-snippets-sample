@@ -15,14 +15,14 @@ enum Result {
 
 // MARK: - Protocol Snippet
 protocol Snippet {
-    func execute(with completion:(result: Result) -> Void)
+    func execute(with completion: @escaping (Result) -> Void)
     
     var needAdminAccess: Bool { get }
     var name: String { get }
 }
 
 extension Snippet {
-    func execute(with completion:(result: Result) -> Void) {
+    func execute(with completion: @escaping (Result) -> Void) {
         assert(true, "Empty execution body")
     }
 }
